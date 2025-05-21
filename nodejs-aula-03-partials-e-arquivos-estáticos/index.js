@@ -6,6 +6,9 @@ const app = express(); // Iniciando o Express
 // CONFIGURANDO A VIEW ENGINE - EJS
 app.set("view engine", "ejs");
 
+
+// configurando a pasta public para arquivos estáticos
+app.use(express.static("public"));
 // CRIANDO A ROTA PRINCIPAL (RAIZ) DO SITE
 // Método .get cria uma rota na aplicação
 // REQ -> Trata a requisão
@@ -42,5 +45,6 @@ app.listen(8080, (error) => {
     console.log("Ocorreu um erro ao iniciar o servidor!" + error);
   } else {
     console.log("Servidor iniciado com sucesso!");
+    console.log("Acesse http://localhost:5000");
   }
 });

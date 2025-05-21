@@ -1,0 +1,37 @@
+body {
+    background-color: #91abb1;
+}
+
+table img{
+    width: 30%;
+    height: auto;
+}
+
+.imagemPedido{
+    width: 10%;
+    height: auto;
+}
+
+.imagemProduto{
+    width: 20%;
+    height: auto;
+}
+
+ul {
+    list-style: square;
+    line-height: 30px;
+}
+
+a {
+    color:#0ba7c6;
+    text-decoration: none;
+    padding: 20px;
+}
+
+th, td {
+    padding: 10px;
+}
+
+footer {
+    text-align: center;    
+}

@@ -1,0 +1,35 @@
+<%- include ('partials/header.ejs') %> <%- include ('partials/navbar.ejs') %>
+
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h1>Clientes</h1>
+    </div>
+    <div class="cliente" style="background-color: #333333">
+      <table class="table table-bordered table-hover" style="width: 100%">
+        <thead class="table-dark">
+          <tr>
+            <th></th>
+            <th>Nome:</th>
+            <th>CPF:</th>
+            <th>Endereço:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% clientes.forEach(cliente=> { %>
+          <tr>
+            <td style="text-align: center">
+              <img src="imgs/<%=cliente.imagem%>" alt="cliente" />
+            </td>
+            <td><%= cliente.nome %></td>
+            <td><%= cliente.cpf %></td>
+            <td><%= cliente.endereco %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%- include ('partials/footer.ejs') %>
